@@ -9,7 +9,7 @@ from graph import *
 
 graph_data = Graph()
 graph_data.debug_create_test_data()
-print(graph_data.vertexes)
+print('+++', graph_data.vertexes)
 
 N = len(graph_data.vertexes)
 node_indices = list(range(N))
@@ -18,11 +18,13 @@ color_list = []
 for vertex in graph_data.vertexes:
     color_list.append(vertex.color)
 
+
 debug_pallete = Spectral8
 debug_pallete.append('ff0000')
 debug_pallete.append('0000ff')
 
-plot = figure(title='Graph Layout Demonstration', x_range=(0, 500), y_range=(0, 500), tools='', tool_bar_location=None)
+plot = figure(title='Graph Layout Demonstration', x_range=(0, 500), y_range=(0, 500),
+              tools='', toolbar_location=None)
 
 graph = GraphRenderer()
 
